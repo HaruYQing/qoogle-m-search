@@ -1,0 +1,205 @@
+/* === CSS Reset 基礎設定 === */
+
+/* 全域重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* HTML 和 body 基礎設定 */
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* 圖片和媒體 */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 表單元素 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* 連結 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+/* 表格 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 移除瀏覽器預設樣式 */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* 移動裝置優化 */
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* === 專案特定樣式從這裡開始 === */
+body {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+header .left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+header .left span {
+  padding: 8px;
+}
+header .left .activate {
+  color: #4477bb;
+  border-bottom: 2px solid #4477bb;
+}
+header .right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+header .right .header-icon {
+  width: 24px;
+}
+header .right .avatar {
+  width: 36px;
+}
+
+main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 16px;
+  padding-top: 200px;
+}
+main .logo {
+  width: 200px;
+}
+main .search-container {
+  width: 360px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+main .search-container .search-icon {
+  position: absolute;
+  left: 16px;
+  width: 24px;
+}
+main .search-container .right-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  right: 48px;
+  width: 24px;
+}
+main .search-container input {
+  width: 100%;
+  padding: 8px 70px 8px 42px;
+  border-radius: 50px;
+  border: 1px solid #dadce0;
+}
+main .search-container input:focus {
+  outline: unset;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #f2f2f2;
+  color: #636363;
+  font-size: 20px;
+  width: 100%;
+}
+footer .top {
+  padding: 16px;
+  border-bottom: 1px solid #dcdde0;
+}
+footer .bottom {
+  padding: 16px;
+  border-bottom: 1px solid #dcdde0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+em {
+  color: red;
+  position: absolute;
+  bottom: 16px;
+  font-size: 10px;
+}
